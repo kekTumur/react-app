@@ -1,0 +1,15 @@
+.add-item-input {
+    margin-top: 20px;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 5px;
+}
+.add-item-form {
+    position: relative;
+}
+.add-item-btn {
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;   
+}
