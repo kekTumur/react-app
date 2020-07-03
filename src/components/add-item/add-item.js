@@ -22,7 +22,6 @@ export default class AddItem extends Component {
     };
 
     render() {
-        const { onAdded } = this.props;
         return (
             <form className="add-item-form"
                   onSubmit={ this.onSubmit }>
