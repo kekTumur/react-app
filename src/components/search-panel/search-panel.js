@@ -4,17 +4,25 @@ import './search-panel.css';
 
 export default class SearchPanel extends Component {
 
-  labelFilter = event => {
-    this.props.onSearchFilter(event.target.value);
+  state = {
+    term: ''
   };
 
+  // фильтрация в меню
+  changeTerm = event => { 
+    const term = event.target.value;
+    this.setState({ term });
+    this.props.onSearchChange(term);
+  };
+  
   render() {
     const { todos } = this.props;
     return (
       <input type="text"
                 className="form-control search-input"
-                placeholder="type to search" 
-                onChange={ this.labelFilter }
+                placeholder="type to search"
+                value={ this.state.term }
+                onChange={ this.changeTerm }
                 />
     );
   }

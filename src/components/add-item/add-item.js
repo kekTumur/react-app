@@ -9,7 +9,7 @@ export default class AddItem extends Component {
 
     onLabelChange = event => {
         this.setState({
-            label: event.target.value.replace(/[^0-9]/g, '') 
+            label: event.target.value.replace(/[0-9]/g, '') 
         });
     };
 
